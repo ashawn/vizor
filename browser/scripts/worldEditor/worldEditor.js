@@ -66,9 +66,9 @@ function WorldEditor(domElement) {
 	E2.ui.on('dragMoved', this.onDragMoved.bind(this))
 	E2.ui.on('dragDropped', this.onDragDropped.bind(this))
 }
+
 WorldEditor.prototype = Object.create(EventEmitter.prototype)
 WorldEditor.prototype.constructor = WorldEditor
-
 
 WorldEditor.prototype.setTransformMode = function(mode) {
 	this.transformMode = mode

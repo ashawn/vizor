@@ -13,6 +13,7 @@
 		this.updated = true
 		this.node.queued_update = 1
 
+console.log('onGazeClicked')
 		E2.track({
 			event: 'gazeClicked',
 			item: this.targetNode.uid
@@ -20,10 +21,12 @@
 	}
 
 	OnThreeObjectGazeClicked.prototype.onGazeIn = function() {
+console.log('onGazeIn')
 		this.focused = true
 	}
 
 	OnThreeObjectGazeClicked.prototype.onGazeOut = function() {
+console.log('onGazeOut')
 		if (this.triggerState) {
 			this.triggerState = false
 			this.updated = true

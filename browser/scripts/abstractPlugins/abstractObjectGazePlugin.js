@@ -93,6 +93,9 @@
 		if (!this.object3d.gazeClickers)
 			this.object3d.gazeClickers = {}
 
+console.log('install clicker on ', this.object3d.uuid)
+		E2.app.player.rayInput.add(this.object3d)
+
 		this.object3d.gazeClickers[this.node.uid] = true
 		this.object3d.gazeClickerCount = Object.keys(this.object3d.gazeClickers).length
 
@@ -118,6 +121,8 @@
 			return;
 
 		delete this.object3d.gazeClickers[this.node.uid]
+
+		E2.app.player.rayInput.remove(this.object3d)
 
 		this.object3d.gazeClickerCount = Object.keys(this.object3d.gazeClickers).length
 
