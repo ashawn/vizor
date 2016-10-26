@@ -79,6 +79,7 @@
 	}
 
 	ThreeGazeClicker.prototype.play = function() {
+		this.input.setSize(E2.core.renderer.getSize())
 	}
 
 	ThreeGazeClicker.prototype.state_changed = function(ui) {
